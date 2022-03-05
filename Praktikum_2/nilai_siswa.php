@@ -78,7 +78,7 @@
             $nilai_uts = $_POST['uts'];
             $nilai_uas = $_POST['uas'];
             $nilai_tugas = $_POST['tugas'];
-            echo "<table>";
+            
             if (!empty($proses)) {
                 echo 'Proses : ' .$proses;
                 echo '<br/>Nama : ' .$nama_siswa;
@@ -112,7 +112,7 @@
                 } else {
                     echo '<br/>Keterangan : <span class="badge badge-danger">TIDAK LULUS</span>';
                 }
-                echo "</table>";    
+                
               
             }
             
