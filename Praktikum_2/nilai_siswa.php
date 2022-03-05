@@ -66,7 +66,6 @@
                                 class="col-sm-4 col-form-label font-weight-bold text-right"></label>
                             <div class="col-sm-5">
                                 <input name="proses" class="btn btn-primary" type="submit">
-
                             </div>
                         </div>
                     </form>
@@ -79,7 +78,7 @@
             $nilai_uts = $_POST['uts'];
             $nilai_uas = $_POST['uas'];
             $nilai_tugas = $_POST['tugas'];
-
+            echo "<table>";
             if (!empty($proses)) {
                 echo 'Proses : ' .$proses;
                 echo '<br/>Nama : ' .$nama_siswa;
@@ -87,6 +86,34 @@
                 echo '<br/>Nilai UTS : ' .$nilai_uts;
                 echo '<br/>Nilai UAS : ' .$nilai_uas;
                 echo '<br/>Nilai Tugas Praktikum : ' .$nilai_tugas;
+
+                $total = ($nilai_uts * 30/100) + ($nilai_tugas * 35/100) + ($nilai_uas * 35/100);
+                echo '<br/>Total Nilai : <span class="badge badge-warning">'.$total.'</span>';
+
+                if ($total >= 0 && $total <=35) {
+                    echo '<br/>Grade : <span class="badge badge-primary">E</span>';
+                } else if ($total >= 36 && $total <= 55) {
+                    echo '<br/>Grade : <span class="badge badge-primary">D</span>';
+                } else if ($total >= 56 && $total <= 69) {
+                    echo '<br/>Grade : <span class="badge badge-primary">C</span>';
+                } else if ($total >= 70 && $total <= 84) {
+                    echo '<br/>Grade : <span class="badge badge-primary">B</span>';
+                } else if ($total >= 85 && $total <= 100) {
+                    echo '<br/>Grade : <span class="badge badge-primary">A</span>';
+                } else if ($total < 0 ) {
+                    echo '<br/>Grade : <span class="badge badge-primary">I</span>';
+                } else if ($total > 100 ) {
+                    echo '<br/>Grade : <span class="badge badge-primary">I</span>';
+                }
+                
+
+                if ($total >= 55) {
+                    echo '<br/>Keterangan : <span class="badge badge-success">LULUS</span>';
+                } else {
+                    echo '<br/>Keterangan : <span class="badge badge-danger">TIDAK LULUS</span>';
+                }
+                echo "</table>";    
+              
             }
             
         
