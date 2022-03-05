@@ -105,7 +105,8 @@
             echo '<br/>Nama Customer : ' .$nama_customer;
             echo '<br/>Produk Pilihan : ' .$produk;
             echo '<br/>Jumlah Beli : ' .$jumlah;
-            echo '<br/>Total Belanja : ' .$harga;
+            $format = number_format($harga,0,",",".");
+            echo '<br/>Total Belanja : Rp. ' .$format;
         ?>
     </div>
 
