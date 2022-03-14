@@ -34,9 +34,9 @@
                                 Kuliah</label>
                             <div class="col-sm-8">
                                 <select class="form-control" name="matkul" id="exampleFormControlSelect1">
-                                    <option value="DDP">Dasar Dasar Pemrograman</option>
-                                    <option value="BDI">Basis Data I</option>
-                                    <option value="WEB1">Pemrograman Web</option>
+                                    <option value="Dasar Dasar Pemrograman">Dasar Dasar Pemrograman</option>
+                                    <option value="Basis Data I">Basis Data I</option>
+                                    <option value="Pemrograman Web">Pemrograman Web</option>
                                 </select>
                             </div>
                         </div>
@@ -106,21 +106,17 @@
                     echo '<br/>Grade : <span class="badge badge-primary">I</span>';
                 }
                 
-
                 if ($total >= 55) {
                     echo '<br/>Keterangan : <span class="badge badge-success">LULUS</span>';
                 } else {
                     echo '<br/>Keterangan : <span class="badge badge-danger">TIDAK LULUS</span>';
                 }
-                
-              
             }
-            
         
             ?>
         </div>
         <div class="card-footer">
-            Develop By @isepman @2022
+            Develop By @isepman @<?php echo date('Y'); ?>
         </div>
     </div>
 </body>

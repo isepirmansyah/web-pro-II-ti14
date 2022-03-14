@@ -16,7 +16,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-8">
-                    <h4>Form Nilai Siswa</h4>
+                    <h4>Belanja Online</h4>
                     <hr>
                     <div class="">
                         <div class="col-md-6">
@@ -89,6 +89,7 @@
     </div>
     <div class="m-2">
         <?php
+
             $proses = $_POST['proses'];
             $nama_customer = $_POST['nama'];
             $produk = $_POST['produk'];
