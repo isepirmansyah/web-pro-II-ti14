@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+
     <title>Document</title>
 </head>
 
@@ -60,7 +61,7 @@
                             </ul>
                             <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-secondary" type="submit">Search</button>
+                                <button class="btn btn-outline-secondary" type="submit">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -83,7 +84,8 @@
                         <div class="form-group row pt-3">
                             <label for="matkul" class="col-3 col-form-label">Pilih MK</label>
                             <div class="col-6">
-                                <select class="form-control" name="matkul" id="exampleFormControlSelect1">
+                                <select class="form-select" name="matkul">
+                                    <option hidden>== Pilih Matkul ==</option>
                                     <option value="Dasar Dasar Pemrograman">Dasar Dasar Pemrograman</option>
                                     <option value="Basis Data I">Basis Data I</option>
                                     <option value="Pemrograman Web">Pemrograman Web</option>
